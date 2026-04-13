@@ -11,27 +11,76 @@
 </head>
 <body>
 
-    <section class="hero-section">
-        <div class="hero-image-container">
-            <div class="hero-overlay"></div>
-        </div>
-        
-        <div class="content-wrapper">
-            <!-- Left Block -->
-            <div class="hero-left">
-                <span class="hero-pill-label">Sogni di lavorare in un asilo nido?</span>
-                <h1 class="hero-title">CORSO DI QUALIFICA REGIONALE<br>OPERATORE DEI SERVIZI ALL'INFANZIA</h1>
-            </div>
-
-            <!-- Right Block -->
-            <div class="hero-right">
-                <p class="hero-description">
-                    Il primo Corso di Formazione riconosciuto a livello nazionale e dalla Regione Sardegna rivolto a chi desidera lavorare in un asilo nido.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact-form" class="btn btn-primary">Maggiori Informazioni</a>
+    <!-- Revised Hero Section: Two-Tone Layout -->
+    <section class="hero-new">
+        <div class="hero-top-banner">
+            <div class="content-wrapper header-nav">
+                <div class="header-left">
+                    <!-- Nav removed as requested -->
                 </div>
             </div>
+
+            <div class="content-wrapper main-hero-content">
+                <div class="hero-left-col">
+                    <p class="hero-small-desc">
+                        Il primo Corso di Formazione riconosciuto a livello nazionale e dalla Regione Sardegna rivolto a chi desidera lavorare in un asilo nido.
+                    </p>
+                    
+                    <div class="hero-form-wrapper">
+                        <form class="contact-form hero-form">
+                            <h3 class="form-title">Richiedi Informazioni</h3>
+                            <div class="form-group">
+                                <input type="text" placeholder="Il tuo nome" class="form-input" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="email" placeholder="La tua email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" placeholder="Telefono" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-input" required>
+                                    <option value="" disabled selected>Preferisco essere contattato</option>
+                                    <option value="mattina">Mattina</option>
+                                    <option value="pomeriggio">Pomeriggio</option>
+                                    <option value="sera">Sera</option>
+                                    <option value="nessuna">Nessuna Preferenza</option>
+                                </select>
+                            </div>
+
+                            <div class="privacy-section">
+                                <div class="privacy-item">
+                                    <input type="checkbox" id="hero-privacy-1" required>
+                                    <label for="hero-privacy-1">Ho preso visione dell'informativa privacy (Reg. 2016/679).</label>
+                                </div>
+                                <div class="privacy-item">
+                                    <input type="checkbox" id="hero-privacy-2" required>
+                                    <label for="hero-privacy-2">Autorizzo Sfia srl a fornirmi informazioni su questo corso.</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="contact-button">Invia Richiesta</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hero-right-col">
+                    <span class="hero-question-text glass-pill">Sogni di lavorare in un asilo nido?</span>
+                    <h1 class="hero-main-title">
+                        <span class="hero-title-top">Corso di Qualifica Regionale</span><br>
+                        Operatore dei Servizi all'<span class="accent-text">Infanzia.</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-bottom-image">
+            <div class="hero-img-bg" style="background-image: url('assets/hero-definitiva.webp');"></div>
+            <div class="hero-img-overlay"></div>
         </div>
     </section>
 
@@ -44,7 +93,7 @@
                 <div class="points-list">
                     <div class="point-item active" 
                         data-index="0"
-                        data-img="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1972&auto=format&fit=crop"
+                        data-img="assets/punto-di-forza-1.webp"
                         data-text="Il nostro corso offre una flessibilità unica con pagamenti rateizzati, garantendo a tutti l'accesso a una formazione di alta qualità nel settore dell'infanzia.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -59,7 +108,7 @@
                     
                     <div class="point-item inactive" 
                         data-index="1"
-                        data-img="https://images.unsplash.com/photo-1587653263995-422546a72569?q=80&w=2070&auto=format&fit=crop"
+                        data-img="assets/punto-di-forza-2.webp"
                         data-text="Ottieni una qualifica legalmente riconosciuta su tutto il territorio nazionale e regionale, fondamentale per lavorare in strutture pubbliche e private.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -74,7 +123,7 @@
 
                     <div class="point-item inactive" 
                         data-index="2"
-                        data-img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+                        data-img="assets/punto-di-forza-3.webp"
                         data-text="Sarete seguiti passo dopo passo da tutor esperti pronti a guidarvi nel vostro percorso di studi e nell'inserimento professionale.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -92,7 +141,7 @@
             <!-- Right: Image Stack/Card -->
             <div class="strengths-right">
                 <div class="strength-card">
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1972&auto=format&fit=crop" alt="Punto di forza" class="strength-img">
+                    <img src="assets/punto-di-forza-1.webp" alt="Punto di forza" class="strength-img">
                     <div class="strength-info-card">
                         <p>Il nostro corso offre una flessibilità unica con pagamenti rateizzati, garantendo a tutti l'accesso a una formazione di alta qualità nel settore dell'infanzia.</p>
                     </div>
@@ -106,7 +155,7 @@
         <div class="aim-container">
             <!-- Left: Image -->
             <div class="aim-left">
-                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" alt="Bambini in asilo" class="aim-img">
+                <img src="assets/finalità.webp" alt="Bambini in asilo" class="aim-img">
             </div>
 
             <!-- Right: Text -->
@@ -114,7 +163,10 @@
                 <h2 class="section-title">Finalità del corso</h2>
                 <div class="aim-content">
                     <p class="aim-text">
-                        La finalità del corso è quella di far acquisire ai corsisti le competenze previste dalla <strong>QUALIFICA REGIONALE ED EUROPEA “OPERATORE DEI SERVIZI ALL’INFANZIA“</strong> (con funzioni non educative) il quale a fine corso sarà in grado di svolgere la propria attività, operando con rapporto di lavoro di dipendente o come libero professionista, o come socio in caso di cooperativa – presso asili nido, nelle strutture educative, nei servizi socio-educativi e sociosanitari gestiti dagli enti locali, dalle cooperative e dal privato sociale.
+                        La finalità del corso è quella di far acquisire ai corsisti le competenze previste dalla <strong>QUALIFICA REGIONALE ED EUROPEA “OPERATORE DEI SERVIZI ALL’INFANZIA“</strong> (con funzioni non educative).
+                    </p>
+                    <p class="aim-text">
+                        A fine corso, sarai in grado di svolgere la tua attività operando come dipendente, libero professionista o socio di cooperativa presso asili nido, strutture educative, servizi socio-educativi e sociosanitari gestiti da enti locali o privati.
                     </p>
                     <a href="#contact-form" class="btn btn-secondary">Contattaci</a>
                 </div>
@@ -127,17 +179,17 @@
         <div class="marquee-wrapper">
             <div class="marquee-content">
                 <!-- First Set -->
-                <div class="marquee-item"><img src="assets/ministero-istruzione.png" alt="Ministero dell'Istruzione"></div>
-                <div class="marquee-item"><img src="assets/ministero-lavoro.png" alt="Ministero del Lavoro"></div>
-                <div class="marquee-item"><img src="assets/por-sardegna.png" alt="POR Sardegna"></div>
-                <div class="marquee-item"><img src="assets/reg-autonoma-sardegna.png" alt="Regione Sardegna"></div>
-                <div class="marquee-item"><img src="assets/sfia.png" alt="SFIA"></div>
+                <div class="marquee-item"><img src="assets/ministero-istruzione.webp" alt="Ministero dell'Istruzione"></div>
+                <div class="marquee-item"><img src="assets/ministero-lavoro.webp" alt="Ministero del Lavoro"></div>
+                <div class="marquee-item"><img src="assets/por-sardegna.webp" alt="POR Sardegna"></div>
+                <div class="marquee-item"><img src="assets/reg-autonoma-sardegna.webp" alt="Regione Sardegna"></div>
+                <div class="marquee-item"><img src="assets/sfia.webp" alt="SFIA"></div>
                 <!-- Duplicate for seamless loop -->
-                <div class="marquee-item"><img src="assets/ministero-istruzione.png" alt="Ministero dell'Istruzione"></div>
-                <div class="marquee-item"><img src="assets/ministero-lavoro.png" alt="Ministero del Lavoro"></div>
-                <div class="marquee-item"><img src="assets/por-sardegna.png" alt="POR Sardegna"></div>
-                <div class="marquee-item"><img src="assets/reg-autonoma-sardegna.png" alt="Regione Sardegna"></div>
-                <div class="marquee-item"><img src="assets/sfia.png" alt="SFIA"></div>
+                <div class="marquee-item"><img src="assets/ministero-istruzione.webp" alt="Ministero dell'Istruzione"></div>
+                <div class="marquee-item"><img src="assets/ministero-lavoro.webp" alt="Ministero del Lavoro"></div>
+                <div class="marquee-item"><img src="assets/por-sardegna.webp" alt="POR Sardegna"></div>
+                <div class="marquee-item"><img src="assets/reg-autonoma-sardegna.webp" alt="Regione Sardegna"></div>
+                <div class="marquee-item"><img src="assets/sfia.webp" alt="SFIA"></div>
             </div>
         </div>
     </section>
@@ -284,7 +336,7 @@
             <!-- Left: Image Stack/Card (Now on the left) -->
             <div class="strengths-right">
                 <div class="strength-card">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop" alt="Punto di forza" class="strength-img">
+                    <img src="assets/perchè-1.webp" alt="Punto di forza" class="strength-img">
                     <div class="strength-info-card">
                         <p>SFIA ha formato con successo oltre 300 operatori, garantendo un'esperienza consolidata nel settore della formazione professionale.</p>
                     </div>
@@ -295,9 +347,9 @@
             <div class="strengths-left">
                 <h2 class="section-title">Perché scegliere SFIA?</h2>
                 <div class="points-list">
-                    <div class="point-item active" 
-                        data-index="0"
-                        data-img="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop"
+                    <div class="point-item inactive" 
+                        data-index="2"
+                        data-img="assets/perchè-1.webp"
                         data-text="SFIA ha formato con successo oltre 300 operatori, garantendo un'esperienza consolidata nel settore della formazione professionale.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -312,7 +364,7 @@
                     
                     <div class="point-item inactive" 
                         data-index="1"
-                        data-img="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=2070&auto=format&fit=crop"
+                        data-img="assets/perchè-2.webp"
                         data-text="Un corsista su tre trova lavoro prima dell'esame finale, durante lo stage, a dimostrazione dell'efficacia del nostro network.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -327,7 +379,7 @@
 
                     <div class="point-item inactive" 
                         data-index="2"
-                        data-img="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2011&auto=format&fit=crop"
+                        data-img="assets/perchè-3.webp"
                         data-text="Puoi pagare il corso comodamente a rate, senza rivolgerti a finanziarie esterne, direttamente con la nostra segreteria.">
                         <div class="point-header">
                             <div class="point-icon">
@@ -390,7 +442,7 @@
                         <p>“Mi sono iscritta al corso Regionale “Operatore dei Servizi all’Infanzia” organizzato dalla SFIA per inseguire il sogno di lavorare nel mondo dell’infanzia. Ho trovato un corpo docente preparato, qualificato, supportato da una grande organizzazione composta da tutor e coordinatori. Ora, grazie allo stage di 200 ore, la speranza di riuscire a entrare a lavorare in un settore in cui ho sempre ambito lavorare è concreta!”</p>
                     </div>
                     <div class="review-profile">
-                        <img src="t-1.png" alt="Vanessa Hervatin" class="review-img">
+                        <img src="assets/t-1.webp" alt="Vanessa Hervatin" class="review-img">
                         <div class="profile-info">
                             <h4>Vanessa Hervatin</h4>
                             <span>Cagliari</span>
@@ -409,7 +461,7 @@
                         <p>“Il corso Regionale di qualifica per “Operatore dei Servizi all’Infanzia” organizzato dalla SFIA è una grande opportunità per chi come me vuole lavorare con e per i bambini. Professionalità, gentilezza e disponibilità sono il biglietto da visita di tutti i professionisti e responsabili di questo bellissimo progetto.”</p>
                     </div>
                     <div class="review-profile">
-                        <img src="t-2.png" alt="Sabrina Medda" class="review-img">
+                        <img src="assets/t-2.webp" alt="Sabrina Medda" class="review-img">
                         <div class="profile-info">
                             <h4>Sabrina Medda</h4>
                             <span>Cagliari</span>
@@ -428,7 +480,7 @@
                         <p>“Era da tempo che volevo lavorare con i bambini grazie al corso OPI e alla professionalità dello Staff SFIA, il mio sogno si è realizzato. La stessa struttura dove ho svolto il tirocinio di 200 ore mi ha assunta. Oggi sono un Operatrice all’infanzia presso l’asilo nido “IL GIROTONDO” di Anna Doppio.”</p>
                     </div>
                     <div class="review-profile">
-                        <img src="t-3.png" alt="Dionigia Piras" class="review-img">
+                        <img src="assets/t-3.webp" alt="Dionigia Piras" class="review-img">
                         <div class="profile-info">
                             <h4>Dionigia Piras</h4>
                             <span>Sassari</span>
@@ -476,7 +528,7 @@
                 <!-- Member 1 - Veronica Lai -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="veronica-lai.png" alt="Veronica Lai">
+                        <img src="assets/veronica-lai.webp" alt="Veronica Lai">
                         <div class="team-overlay">
                             <h4>Veronica Lai</h4>
                             <p>Ostetrica professionista, specialista in puericoltura e primo soccorso pediatrico.</p>
@@ -492,7 +544,7 @@
                 <!-- Member 2 - Luana Lutzu -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="luana-lutzu.png" alt="Luana Lutzu">
+                        <img src="assets/luana-lutzu.webp" alt="Luana Lutzu">
                         <div class="team-overlay">
                             <h4>Luana Lutzu</h4>
                             <p>Psicologa, specialista in Psicologia dello Sviluppo e in Neuropsicologia dell’Età Evolutiva.</p>
@@ -508,7 +560,7 @@
                 <!-- Member 3 - Luca Gasole -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="luca-gasole.png" alt="Luca Gasole">
+                        <img src="assets/luca-gasole.webp" alt="Luca Gasole">
                         <div class="team-overlay">
                             <h4>Luca Gasole</h4>
                             <p>Psicologo ed educatore esperto in Psicologia della Comunicazione, dell’Apprendimento e Salute psico-sociale.</p>
@@ -524,7 +576,7 @@
                 <!-- Member 4 - Maria Gabriella Santolisier -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="maria-gabriella-santolisier.png" alt="Maria Gabriella Santolisier">
+                        <img src="assets/maria-gabriella-santolisier.webp" alt="Maria Gabriella Santolisier">
                         <div class="team-overlay">
                             <h4>Maria Gabriella</h4>
                             <p>Esperta nelle tecniche psicopedagogiche dell'età evolutiva.</p>
@@ -589,7 +641,7 @@
             </div>
 
             <div class="contact-right">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800" alt="Contact Us">
+                <img src="assets/form.webp" alt="Contact Us">
             </div>
         </div>
     </section>
@@ -630,7 +682,7 @@
                 </div>
 
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
+                    <a href="https://sfia.it/privacy/?_gl=1*xd2xmf*_gcl_au*NzI0NTM0NTE2LjE3NzU3MjAwNjE.*_ga*OTE5MTYwNDk5LjE3NzU3MjAwNjE.*_ga_57TF3RTE8P*czE3NzYwNzQyNjQkbzQkZzAkdDE3NzYwNzQyNjUkajU5JGwwJGgxNDI0ODQ2NjY0" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
                     <a href="#">Cookie Settings</a>
                 </div>
             </div>

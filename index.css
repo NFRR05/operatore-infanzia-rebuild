@@ -376,85 +376,103 @@ body {
     opacity: 0;
 }
 
-/* Floating CTA (bottom-right) */
+/* Floating CTA: Dynamic width based on content */
 .floating-cta {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 56px;
-    height: 56px;
-    border-radius: 999px;
+    right: 25px;
+    bottom: 25px;
+    height: 64px; 
+    width: auto;
+    min-width: 64px;
+    max-width: 64px; /* Default: just the icon */
+    border-radius: 100px;
     background: var(--clr-cta);
     color: #fff;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    padding: 0;
+    box-shadow: 0 12px 30px rgba(255, 122, 0, 0.3);
     border: none;
     cursor: pointer;
     z-index: 1200;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-}
-
-.floating-cta:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.22);
-}
-
-.floating-cta:active {
-    transform: translateY(-1px) scale(0.98);
-}
-
-.floating-cta:focus {
-    outline: 3px solid rgba(255,122,0,0.18);
-}
-
-/* Make it slightly smaller on very small screens */
-@media (max-width: 480px) {
-    .floating-cta {
-        right: 14px;
-        bottom: 14px;
-        width: 48px;
-        height: 48px;
-    }
-}
-
-/* Floating CTA label (appears on hover) */
-.floating-cta-label {
-    position: absolute;
-    right: calc(100% + 12px);
-    top: 50%;
-    transform: translateY(-50%) translateX(6px);
-    background: var(--clr-white);
-    color: var(--clr-header);
-    padding: 8px 14px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.18s ease, transform 0.18s ease;
+    overflow: hidden;
+    transition: 
+        max-width 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+        padding 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
     white-space: nowrap;
 }
 
-.floating-cta:hover .floating-cta-label,
-.floating-cta:focus .floating-cta-label {
+.floating-cta svg {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 0 20px; /* Centered in circle mode */
+    transition: margin 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-cta-label {
+    opacity: 0;
+    max-width: 0;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    transition: opacity 0.3s ease, margin 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.floating-cta:hover {
+    max-width: 300px; /* Large enough to fit text */
+    padding-left: 24px; /* Content-driven padding */
+    padding-right: 0px; 
+    box-shadow: 0 15px 45px rgba(255, 122, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+.floating-cta:hover svg {
+    margin: 0 20px 0 16px; /* Optimized gap and edge spacing */
+}
+
+.floating-cta:hover .floating-cta-label {
     opacity: 1;
-    transform: translateY(-50%) translateX(0);
+    max-width: 200px; 
+}
+
+.floating-cta:active {
+    transform: scale(0.95) translateY(0);
+}
+
+.floating-cta:focus {
+    outline: 4px solid rgba(255, 122, 0, 0.25);
+    outline-offset: 4px;
 }
 
 @media (max-width: 480px) {
-    .floating-cta-label {
-        right: auto;
-        left: 50%;
-        bottom: calc(100% + 10px);
-        top: auto;
-        transform: translateX(-50%) translateY(6px);
+    .floating-cta {
+        right: 15px;
+        bottom: 15px;
+        height: 56px;
+        min-width: 56px;
+        max-width: 56px;
     }
-    .floating-cta:hover .floating-cta-label,
-    .floating-cta:focus .floating-cta-label {
-        transform: translateX(-50%) translateY(0);
+    .floating-cta svg {
+        margin: 0 16px;
+    }
+    .floating-cta:hover {
+        max-width: 220px;
+        padding-left: 18px;
+    }
+    .floating-cta:hover svg {
+        margin: 0 16px 0 12px;
+    }
+    .floating-cta:hover .floating-cta-label {
+        font-size: 17px;
     }
 }
 

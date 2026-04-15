@@ -163,4 +163,19 @@ document.addEventListener('DOMContentLoaded', () => {
             startInterval();
         }
     });
+
+    // --- Floating CTA: scroll to hero form ---
+    const scrollBtn = document.getElementById('scroll-down-btn');
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', (e) => {
+            const form = document.getElementById('hero-contact-form');
+            if (form) {
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const firstInput = form.querySelector('input, select, textarea, button');
+                if (firstInput) {
+                    try { firstInput.focus({ preventScroll: true }); } catch (err) { firstInput.focus(); }
+                }
+            }
+        });
+    }
 });

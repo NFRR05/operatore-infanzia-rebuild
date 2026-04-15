@@ -60,8 +60,8 @@ body {
 
 .hero-top-banner {
     background-color: var(--clr-header);
-    padding-top: 10px;
-    padding-bottom: 80px;
+    padding-top: 0; /* avvicina il contenuto al top */
+    padding-bottom: 40px; /* ridotto per compattezza */
 }
 
 /* Nav & Contact Header */
@@ -69,30 +69,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px var(--container-padding);
-    margin-bottom: 10px;
+    padding: 12px var(--container-padding); /* meno spazio verticale */
+    margin-bottom: 8px;
 }
 
-/* Glass Pill Effect */
-.glass-pill {
+/* Hero question pill: white background, dark/brand text, slightly larger font */
+.hero-question-text {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 10px 24px;
+    background: var(--clr-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 12px 28px;
     border-radius: 100px;
-    color: var(--clr-white);
-    font-size: 14px;
+    color: var(--clr-header);
+    font-size: 18px;
     font-weight: 700;
-    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-.glass-pill:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+.hero-question-text:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
 }
 
 .hero-contact-info span {
@@ -104,7 +103,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 var(--container-padding);
+    padding: 8px var(--container-padding); /* avvicina la riga principale al top */
     position: relative;
     z-index: 10;
 }
@@ -164,7 +163,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    padding-top: 40px;
+    padding-top: 12px; /* meno spazio sopra i titoli */
 }
 
 .hero-subtitle-row {
@@ -252,8 +251,8 @@ body {
 
     .header-nav {
         flex-direction: column;
-        gap: 15px;
-        margin-bottom: 40px;
+        gap: 12px;
+        margin-bottom: 16px; /* meno spazio sopra il form su mobile */
         align-items: flex-start;
     }
 
@@ -297,7 +296,7 @@ body {
     }
     
     .hero-form-wrapper {
-        margin-bottom: -150px;
+        margin-bottom: -80px; /* meno overlap, form più vicino al top */
         width: 100%;
         max-width: 430px;
     }
@@ -315,7 +314,7 @@ body {
     }
 
     .hero-bottom-image {
-        height: 450px;
+        height: 360px; /* immagine più compatta su mobile */
     }
 }
 
@@ -324,13 +323,20 @@ body {
         font-size: 32px;
     }
 
+    .header-nav {
+        margin-bottom: 12px;
+        padding: 8px 20px;
+    }
+
     .hero-form-wrapper {
-        /* increase overlap so the background image is more visible on small screens */
-        margin-bottom: -1000px;
+        /* controlled overlap for very small screens */
+        margin-bottom: -1200px;
+        width: 100%;
+        max-width: 420px;
     }
 
     .hero-bottom-image {
-        height: 500px;
+        height: 600px; /* mantieni immagine compatta */
     }
 
     .hero-img-bg {
@@ -368,6 +374,88 @@ body {
 .hero-right {
     animation: fadeUp 0.8s ease-out 0.6s forwards;
     opacity: 0;
+}
+
+/* Floating CTA (bottom-right) */
+.floating-cta {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    background: var(--clr-cta);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    border: none;
+    cursor: pointer;
+    z-index: 1200;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.floating-cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+.floating-cta:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.floating-cta:focus {
+    outline: 3px solid rgba(255,122,0,0.18);
+}
+
+/* Make it slightly smaller on very small screens */
+@media (max-width: 480px) {
+    .floating-cta {
+        right: 14px;
+        bottom: 14px;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Floating CTA label (appears on hover) */
+.floating-cta-label {
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: var(--clr-white);
+    color: var(--clr-header);
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    white-space: nowrap;
+}
+
+.floating-cta:hover .floating-cta-label,
+.floating-cta:focus .floating-cta-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 480px) {
+    .floating-cta-label {
+        right: auto;
+        left: 50%;
+        bottom: calc(100% + 10px);
+        top: auto;
+        transform: translateX(-50%) translateY(6px);
+    }
+    .floating-cta:hover .floating-cta-label,
+    .floating-cta:focus .floating-cta-label {
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 /* --- Strengths Section --- */

@@ -325,11 +325,17 @@ body {
     }
 
     .hero-form-wrapper {
-        margin-bottom: -200px;
+        /* increase overlap so the background image is more visible on small screens */
+        margin-bottom: -1000px;
     }
 
     .hero-bottom-image {
         height: 500px;
+    }
+
+    .hero-img-bg {
+        /* show the upper part of the image on small devices */
+        background-position: center top;
     }
 }
 

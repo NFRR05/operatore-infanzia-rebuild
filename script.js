@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollBtn = document.getElementById('scroll-down-btn');
     if (scrollBtn) {
         scrollBtn.addEventListener('click', (e) => {
-            const form = document.getElementById('contact-form');
+            const form = document.getElementById('iscrizione-corso');
             if (form) {
                 form.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 const firstInput = form.querySelector('input, select, textarea, button');

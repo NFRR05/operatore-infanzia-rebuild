@@ -114,18 +114,27 @@ document.addEventListener('DOMContentLoaded', () => {
             activeItem.classList.add('active');
             activeItem.classList.remove('inactive');
             
-            // Update Visuals
-            const newImg = activeItem.getAttribute('data-img');
-            const newText = activeItem.getAttribute('data-text');
-            
-            if (img) {
+            // Update Background Image with Seamless Crossfade
+            const newImgSrc = activeItem.getAttribute('data-img');
+            if (img && newImgSrc) {
+                // Set current image as background so we don't fade to white
+                const card = img.parentElement;
+                card.style.backgroundImage = `url('${img.src}')`;
+                card.style.backgroundSize = 'cover';
+                card.style.backgroundPosition = 'center';
+
                 img.style.opacity = '0';
+                
                 setTimeout(() => {
-                    img.src = newImg;
-                    img.style.opacity = '1';
-                }, 300);
+                    img.src = newImgSrc;
+                    // Optional: wait for load for even more seamlessness
+                    img.onload = () => {
+                        img.style.opacity = '1';
+                    };
+                    // Fallback in case onload doesn't fire or image is cached
+                    setTimeout(() => { img.style.opacity = '1'; }, 100);
+                }, 400);
             }
-            if (infoText) infoText.innerText = newText;
 
             // Restart progress bar animation
             const progressBar = activeItem.querySelector('.point-progress-bar');

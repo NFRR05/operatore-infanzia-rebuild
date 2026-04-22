@@ -12,78 +12,44 @@
 <body>
 
     <!-- Revised Hero Section: Two-Tone Layout -->
+    <!-- Simplified Hero Section -->
     <section class="hero-new">
-        <div class="hero-top-banner">
-            <div class="content-wrapper header-nav">
-                <div class="header-left">
-                    <!-- Nav removed as requested -->
-                </div>
-            </div>
-
-            <div class="content-wrapper main-hero-content">
-                <div class="hero-left-col">
-                    <div class="hero-form-wrapper">
-                        <form id="hero-contact-form" class="contact-form hero-form">
-                            <h3 class="form-title">Richiedi Informazioni</h3>
-                            <div class="form-group">
-                                <input type="text" placeholder="Il tuo nome" class="form-input" required>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <input type="email" placeholder="La tua email" class="form-input" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" placeholder="Telefono" class="form-input" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <select class="form-input" required>
-                                    <option value="" disabled selected>Preferisco essere contattato</option>
-                                    <option value="mattina">Mattina</option>
-                                    <option value="pomeriggio">Pomeriggio</option>
-                                    <option value="sera">Sera</option>
-                                    <option value="nessuna">Nessuna Preferenza</option>
-                                </select>
-                            </div>
-
-                            <div class="privacy-section">
-                                <div class="privacy-item">
-                                    <input type="checkbox" id="hero-privacy-1" required>
-                                    <label for="hero-privacy-1">Ho preso visione dell'informativa privacy (Reg. 2016/679).</label>
-                                </div>
-                                <div class="privacy-item">
-                                    <input type="checkbox" id="hero-privacy-2" required>
-                                    <label for="hero-privacy-2">Autorizzo Sfia srl a utilizzare ed elaborare i miei dati personali allo scopo di fornirmi maggiori informazioni su questo corso.</label>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="contact-button">Invia Richiesta</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="hero-right-col">
-                    <div class="hero-title-area">
-                        <div class="hero-subtitle-row">
-                            <span class="hero-question-text">Sogni di lavorare in un asilo nido?</span>
-                            <span class="hero-title-top">Corso di Qualifica Regionale</span>
-                        </div>
-                        <h1 class="hero-main-title">
-                            Operatore dei Servizi all'<span class="accent-text">Infanzia.</span>
-                        </h1>
-                        <p class="hero-small-desc">
-                            Il primo Corso di Formazione riconosciuto a livello nazionale e dalla Regione Sardegna rivolto a chi desidera lavorare in un asilo nido.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="hero-bg" style="background-image: url('assets/hero-definitiva.webp');"></div>
+        <div class="hero-overlay"></div>
         
-        <div class="hero-bottom-image">
-            <div class="hero-img-bg" style="background-image: url('assets/hero-definitiva.webp');"></div>
-            <div class="hero-img-overlay"></div>
+        <div class="content-wrapper hero-container">
+            <div class="hero-content">
+                <div class="hero-badge-row">
+                    <span class="hero-pill">Sogni di lavorare in un asilo nido?</span>
+                    <span class="hero-subtitle">Corso di Qualifica Regionale</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Operatore dei Servizi <br>all'<span class="accent-text">Infanzia.</span>
+                </h1>
+                
+                <p class="hero-desc">
+                    Il primo Corso di Formazione riconosciuto a livello nazionale e dalla Regione Sardegna rivolto a chi desidera lavorare in un asilo nido.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#iscrizione-corso" class="btn btn-primary">Inizia Ora</a>
+                    
+                    <div class="trust-badge">
+                        <div class="trust-avatars">
+                            <img src="assets/t-1.webp" alt="User">
+                            <img src="assets/t-2.webp" alt="User">
+                            <img src="assets/t-3.webp" alt="User">
+                        </div>
+                        <div class="trust-info">
+                            <div class="trust-stars">
+                                ★★★★★
+                            </div>
+                            <div class="trust-text">4.9/5 (300+ Diplomati)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -105,8 +71,7 @@
                 <div class="points-list">
                     <div class="point-item active" 
                         data-index="0"
-                        data-img="assets/punto-di-forza-1.webp"
-                        data-text="Il nostro corso offre una flessibilità unica con pagamenti rateizzati, garantendo a tutti l'accesso a una formazione di alta qualità nel settore dell'infanzia.">
+                        data-img="assets/punto-di-forza-1.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,13 +80,15 @@
                             </div>
                             <h3>Pagamento Rateizzato</h3>
                         </div>
+                        <div class="point-description">
+                            Il nostro corso offre una flessibilità unica con <strong>pagamenti rateizzati</strong>, garantendo a tutti l'accesso a una <strong>formazione di alta qualità</strong> nel settore dell'infanzia.
+                        </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
                     
                     <div class="point-item inactive" 
                         data-index="1"
-                        data-img="assets/punto-di-forza-2.webp"
-                        data-text="Ottieni una qualifica legalmente riconosciuta su tutto il territorio nazionale e regionale, fondamentale per lavorare in strutture pubbliche e private.">
+                        data-img="assets/punto-di-forza-2.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,13 +97,15 @@
                             </div>
                             <h3>Qualifica Riconosciuta</h3>
                         </div>
+                        <div class="point-description">
+                            Ottieni una <strong>qualifica legalmente riconosciuta</strong> su tutto il territorio nazionale e regionale, fondamentale per lavorare in strutture <strong>pubbliche e private</strong>.
+                        </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
 
                     <div class="point-item inactive" 
                         data-index="2"
-                        data-img="assets/punto-di-forza-3.webp"
-                        data-text="Sarete seguiti passo dopo passo da tutor esperti pronti a guidarvi nel vostro percorso di studi e nell'inserimento professionale.">
+                        data-img="assets/punto-di-forza-3.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,6 +113,9 @@
                                 </svg>
                             </div>
                             <h3>Supporto Tutor Dedicato</h3>
+                        </div>
+                        <div class="point-description">
+                            Sarete seguiti passo dopo passo da <strong>tutor esperti</strong> pronti a guidarvi nel vostro percorso di studi e nell'<strong>inserimento professionale</strong>.
                         </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
@@ -156,9 +128,6 @@
             <div class="strengths-right">
                 <div class="strength-card">
                     <img src="assets/punto-di-forza-1.webp" alt="Punto di forza" class="strength-img">
-                    <div class="strength-info-card">
-                        <p>Il nostro corso offre una flessibilità unica con pagamenti rateizzati, garantendo a tutti l'accesso a una formazione di alta qualità nel settore dell'infanzia.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -351,9 +320,6 @@
             <div class="strengths-right">
                 <div class="strength-card">
                     <img src="assets/perchè-1.webp" alt="Punto di forza" class="strength-img">
-                    <div class="strength-info-card">
-                        <p>SFIA ha formato con successo oltre 300 operatori, garantendo un'esperienza consolidata nel settore della formazione professionale.</p>
-                    </div>
                 </div>
             </div>
 
@@ -362,9 +328,8 @@
                 <h2 class="section-title">Perché scegliere SFIA?</h2>
                 <div class="points-list">
                     <div class="point-item inactive" 
-                        data-index="2"
-                        data-img="assets/perchè-1.webp"
-                        data-text="SFIA ha formato con successo oltre 300 operatori, garantendo un'esperienza consolidata nel settore della formazione professionale.">
+                        data-index="0"
+                        data-img="assets/perchè-1.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,13 +338,15 @@
                             </div>
                             <h3>Esperienza Formativa</h3>
                         </div>
+                        <div class="point-description">
+                            SFIA ha formato con successo <strong>oltre 300 operatori</strong>, garantendo un'esperienza consolidata nel settore della <strong>formazione professionale</strong>.
+                        </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
                     
                     <div class="point-item inactive" 
                         data-index="1"
-                        data-img="assets/perchè-2.webp"
-                        data-text="Un corsista su tre trova lavoro prima dell'esame finale, durante lo stage, a dimostrazione dell'efficacia del nostro network.">
+                        data-img="assets/perchè-2.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -388,13 +355,15 @@
                             </div>
                             <h3>Job Placement</h3>
                         </div>
+                        <div class="point-description">
+                            Un corsista su tre <strong>trova lavoro prima dell'esame finale</strong>, durante lo stage, a dimostrazione dell'efficacia del nostro network.
+                        </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
 
                     <div class="point-item inactive" 
                         data-index="2"
-                        data-img="assets/perchè-3.webp"
-                        data-text="Puoi pagare il corso comodamente a rate, senza rivolgerti a finanziarie esterne, direttamente con la nostra segreteria.">
+                        data-img="assets/perchè-3.webp">
                         <div class="point-header">
                             <div class="point-icon">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -402,6 +371,9 @@
                                 </svg>
                             </div>
                             <h3>Flessibilità Totale</h3>
+                        </div>
+                        <div class="point-description">
+                            Puoi pagare il corso comodamente a rate, <strong>senza rivolgerti a finanziarie esterne</strong>, direttamente con la nostra segreteria.
                         </div>
                         <div class="point-progress-container"><div class="point-progress-bar"></div></div>
                     </div>
@@ -603,7 +575,7 @@
             <div class="contact-left">
                 <div class="contact-header">
                     <h2>Investi su te stesso, questa è la TUA occasione.</h2>
-                    <p>Compila il modulo seguente, sarai ricontattato da un membro del nostro staff che sarà lieto di rispondere alle tue domande prononendoti la migliore soluzione. Se la riterrai vantaggiosa, potrai iscriverti al corso e pagarlo in comode rate a interessi zero!</p>
+                    <p>Compila il modulo seguente, sarai ricontattato da un membro del nostro staff che sarà lieto di rispondere alle tue domande prononendoti la migliore soluzione. Se la riterrai vantaggiosa, potrai iscriverti al corso e <span class="marker-highlight">pagarlo in comode rate a interessi zero!</span></p>
                 </div>
 
                 <form class="contact-form">

@@ -140,6 +140,42 @@ body {
     max-width: 600px;
 }
 
+/* Mini Badges below title */
+.hero-mini-badges {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.mini-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08); /* Transparent glass look */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 100px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mini-badge:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.mini-badge span {
+    color: var(--clr-white);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mini-badge svg {
+    color: var(--clr-primary);
+}
+
 .hero-actions {
     display: flex;
     align-items: center;
